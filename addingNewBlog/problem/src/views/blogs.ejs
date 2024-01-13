@@ -1,0 +1,22 @@
+
+<div class="container my-5">
+  <h2 class="mb-4">Latest Blogs</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Image</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% blogDatas.forEach(blogData => { %>
+        <tr>
+          <td><%= blogData.title %></td>
+          <td><%= blogData.description %></td>
+          <td><img src="<%= blogData.img %>" alt="" class="img-fluid"></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
