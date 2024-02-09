@@ -1,13 +1,9 @@
 import express from "express";
-import { renderBlogForm, validateBlog } from "./blog.controller.js";
-import path from "path";
+import bucketListRouter from "./src/features/bucketList/bucketList.routes.js";
+
 const app = express();
 
-app.set("view engine", "ejs");
-app.set("views", path.resolve("views"));
-app.use(express.urlencoded({ extended: true }));
-
-app.get("/", renderBlogForm);
-app.post("/addblog", validateBlog);
+app.use(express.json());
+app.use("/api/bucket-list-items", bucketListRouter);
 
 export default app;

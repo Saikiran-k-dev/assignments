@@ -1,0 +1,1 @@
+{"level":"info","message":"function toString() { [native code] }\n req URL: /api/user/register\n {\"name\":\"vivek\",\"email\":\"cn@gmail.com\",\"password\":\"Ninja@123\"} ","service":"user-service"}
