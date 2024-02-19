@@ -7,6 +7,7 @@ export const connectToMongoDB = () => {
   MongoClient.connect(url)
     .then((clientInstance) => {
       client = clientInstance;
+      console.log(clientInstance);
       console.log("Mongodb is connected");
     })
     .catch((err) => {
@@ -14,6 +15,10 @@ export const connectToMongoDB = () => {
     });
 };
 
+export const getClient = () => {
+  return client;
+}
+
 export const getDB = () => {
-  return client.db("bucketListDB");
+  return client.db("ExpenZap");
 };
